@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static ru.training.jf.io.http.HelloWorldServer.HTML1;
+import static ru.training.jf.io.http.HelloWorldServer.HTML;
 import static ru.training.jf.io.http.SocketProcessor.RESPONSE;
 
 
@@ -67,7 +67,7 @@ public class HttpServerTest {
 //                    .filter(s -> s.trim().length() > 0)
                     .collect(Collectors.joining("\r\n"));
 
-            String s = HTML1;
+            String s = HTML;
             assertThat(response,is(String.format(RESPONSE,s.length(),s)));
 
 
