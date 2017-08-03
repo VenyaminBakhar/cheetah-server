@@ -24,7 +24,7 @@ public class HttpServer {
 
                 Socket s = ss.accept();
                 log.info("Client accepted");
-                executor.execute(new HelloWorldServer(s));
+                executor.execute(new SocketProcessor(s));
             }
         }
 
